@@ -28,7 +28,7 @@ def readClust(data):
     while ind.isdigit() == False or int(ind) > 23 or int(ind) < 1:
         ind = input('Please, input numbers 1 to 23 only!')
     inddata = data.loc[int(ind)] # subset the industry
-    inddata.set_index('cluster_ID', inplace=True) # reset the index to cluster
+    inddata.set_index('ordered_cluster_ID', inplace=True) # reset the index to cluster
     return inddata['keyword'].loc[randint(1, 6)] # return a random cluster
 # Main Code #
 if __name__ == "__main__":
